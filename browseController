@@ -1,0 +1,20 @@
+string(49) "select * from `ciudades` where `slug` = ? limit 1" 
+string(150) "select count(*) as aggregate from `tricks` inner join `ciudad_trick` 
+on `tricks`.`id` = `ciudad_trick`.`trick_id` where `ciudad_trick`.`ciudad_id` = ?" 
+string(279) "select `tricks`.*, `ciudad_trick`.`ciudad_id` 
+as `pivot_ciudad_id`, `ciudad_trick`.`trick_id` as `pivot_trick_id` from `tricks` 
+inner join `ciudad_trick` on `tricks`.`id` = `ciudad_trick`.`trick_id` 
+where `ciudad_trick`.`ciudad_id` = ? order by `created_at` desc limit 6 offset 0" 
+string(208) "select `tags`.*, `tag_trick`.`trick_id` 
+as `pivot_trick_id`, `tag_trick`.`tag_id` as `pivot_tag_id` from `tags` 
+inner join `tag_trick` on `tags`.`id` = `tag_trick`.`tag_id` 
+where `tag_trick`.`trick_id` in (?)" 
+string(244) "select `ciudades`.*, `ciudad_trick`.`trick_id` 
+as `pivot_trick_id`, `ciudad_trick`.`ciudad_id` as `pivot_ciudad_id` from `ciudades` 
+inner join `ciudad_trick` on `ciudades`.`id` = `ciudad_trick`.`ciudad_id` 
+where `ciudad_trick`.`trick_id` in (?)" 
+string(266) "select `categories`.*, `category_trick`.`trick_id` 
+as `pivot_trick_id`, `category_trick`.`category_id` as `pivot_category_id` 
+from `categories` inner join `category_trick` on `categories`.`id` = `category_trick`.`category_id` 
+where `category_trick`.`trick_id` in (?)" 
+string(47) "select * from `users` where `users`.`id` in (?)"  

@@ -1,0 +1,24 @@
+{
+    "name": "codeception/aspect-mock",
+    "description": "Experimental Mocking Framework powered by Aspects",
+    "authors": [
+        {
+            "name": "Michael Bodnarchuk",
+            "email": "davert.php@mailican.com"
+        }
+    ],
+    "autoload": {
+           "psr-0": {
+               "AspectMock": "src/"
+           }
+       },
+    "require": {
+        "php": ">=5.4.0",
+        "lisachenko/go-aop-php": "~0.4.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "@stable",
+        "codeception/verify": "*",
+        "codeception/specify": "*"
+    }
+}
